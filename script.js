@@ -10,47 +10,41 @@ function saveTasks() {
 
 function renderTask(task) {
     let li = document.createElement("li");
-    li.innerText = task.text;
-    li.style.listStyleType = "none";
-    li.style.marginLeft = "25px";
-    li.style.marginTop = "10px";
-    li.style.listStyleType = "numbers";
     li.style.textTransform = "capitalize";
-    // Bouton Modifier
+
+    // Texte de la tâche
+    let taskText = document.createElement("span");
+    taskText.innerText = task.text;
+    li.appendChild(taskText);
+
+    // Groupe de boutons
+    let buttonGroup = document.createElement("div");
+    buttonGroup.className = "button-group";
+
+    // Buton Modifier
     let buttonEditer = document.createElement("button");
     buttonEditer.innerText = "Modifier";
-    buttonEditer.style.marginLeft = "15px";
-    buttonEditer.style.backgroundColor = "whitesmoke";
-    buttonEditer.style.color = "black";
-    buttonEditer.style.cursor = "pointer";
-
     buttonEditer.onclick = function () {
         let newText = prompt("Entrer le nouveau To-Do", task.text);
         if (newText && newText.trim() !== "") {
             task.text = newText.trim();
-            li.firstChild.textContent = task.text;
+            taskText.textContent = task.text;
             saveTasks();
-            li.appendChild(buttonEditer);
-            li.appendChild(buttonSupprimer);
         }
     };
 
-    // Bouton Supprimer
+    // Buton Supprimer
     let buttonSupprimer = document.createElement("button");
     buttonSupprimer.innerText = "Supprimer";
-    buttonSupprimer.style.marginLeft = "15px";
-    buttonSupprimer.style.backgroundColor = "red";
-    buttonSupprimer.style.color = "black";
-    buttonSupprimer.style.cursor = "pointer";
-
     buttonSupprimer.onclick = function () {
         taskList = taskList.filter(t => t.id !== task.id);
         taskContainer.removeChild(li);
         saveTasks();
     };
 
-    li.appendChild(buttonEditer);
-    li.appendChild(buttonSupprimer);
+    buttonGroup.appendChild(buttonEditer);
+    buttonGroup.appendChild(buttonSupprimer);
+    li.appendChild(buttonGroup);
     taskContainer.appendChild(li);
 }
 
@@ -68,7 +62,6 @@ function addlist() {
     taskInput.value = "";
 }
 
-// Charger les tâches au démarrage
 window.onload = function () {
     taskList.forEach(task => renderTask(task));
 };
