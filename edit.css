@@ -1,0 +1,68 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #cfcccc;
+}
+.container{
+    width: 40%;
+    height: 400px;
+    margin: 80px auto;
+    padding: 10px 0;
+    border: #f0f0f0 1px solid;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: scroll;
+}
+h1{
+    width: 100%;
+    font-size: 30px;
+    margin-top: 12px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    font-weight: 600;
+    padding: 10px;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}   
+#task-input{
+    width: 98%;
+    max-width: 500px;
+    height: 40px;
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 5px;
+    color:#131212;
+    border: #c9c9c9 1px solid;
+}
+#task-input :focus{
+    outline: none;
+    border: #4CAF50 1px solid;
+}
+button{
+    width:12%;
+    height: 40px;
+    cursor: pointer;
+    margin-left:3px;
+    padding: 0 2px;
+    background-color: #4fd153;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+form input[type="submit"]{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
