@@ -2,14 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: 'Poppins', sans-serif;
     background-color: #cfcccc;
-  }
-  
-  .container {
+}
+
+.container {
     width: 90%;
     max-width: 600px;
     margin: 80px auto;
@@ -17,24 +17,24 @@
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1 {
+}
+
+h1 {
     font-size: 28px;
     text-align: center;
     margin-bottom: 20px;
     text-transform: uppercase;
-  }
-  
-  #task-input {
+}
+
+#task-input {
     width: 70%;
     height: 40px;
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #c9c9c9;
-  }
-  
-  #add-task-button {
+}
+
+#add-task-button {
     width: 15%;
     height: 40px;
     margin-left: 5%;
@@ -43,19 +43,19 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  #add-task-button:hover {
+}
+
+#add-task-button:hover {
     background-color: #4CAF50;
     color: white;
-  }
-  
-  ul {
+}
+
+ul {
     margin-top: 20px;
     padding: 0;
-  }
-  
-  li {
+}
+
+li {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,55 +64,55 @@
     padding: 10px;
     border-radius: 5px;
     margin-bottom: 10px;
-  }
-  
-  .button-group {
+}
+
+.button-group {
     display: flex;
     gap: 10px;
-  }
-  
-  .button-group button {
+}
+
+.button-group button {
     padding: 5px 10px;
     border-radius: 5px;
     border: none;
     cursor: pointer;
     font-size: 14px;
-  }
-  
-  .button-group button:first-child {
+}
+
+.button-group button:first-child {
     background-color: rgb(197, 196, 196);
     color: black;
-  }
-  
-  .button-group button:first-child:hover {
+}
+
+.button-group button:first-child:hover {
     background-color: #707070;
     color: white;
-  }
-  
-  .button-group button:last-child {
+}
+
+.button-group button:last-child {
     background-color: red;
     color: white;
-  }
-  
-  .button-group button:last-child:hover {
+}
+
+.button-group button:last-child:hover {
     background-color: rgb(112, 14, 14);
-  }
-  
-  @media (max-width: 600px) {
+}
+
+@media (max-width: 600px) {
     #task-input, #add-task-button {
-      width: 100%;
-      margin: 5px 0;
+        width: 100%;
+        margin: 5px 0;
     }
-  
+
     li {
-      flex-direction: column;
-      align-items: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
     }
-  
+
     .button-group {
-      width: 100%;
-      justify-content: flex-end;
-      gap: 10px;
-      margin-top: 10px;
+        width: 100%;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-top: 10px;
     }
-  }
+}
